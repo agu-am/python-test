@@ -103,7 +103,7 @@ def main():
 
     # Inicia el bot. Esto consultará las actualizaciones de Telegram y se ejecutará indefinidamente.
     # allowed_updates=Update.ALL_TYPES asegura que se procesen todos los tipos de actualizaciones.
-    bot_app.run_polling(allowed_updates=Update.ALL_TYPES, host="0.0.0.0", port=9000)
+    bot_app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 # Este es el punto de entrada estándar de Python.
 # Asegura que main() se llame solo cuando el script se ejecuta directamente.
