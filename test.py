@@ -3,6 +3,7 @@ from telegram import Update
 import asyncio # Importar asyncio para ejecutar la función principal
 import json # Importar el módulo json para trabajar con archivos JSON
 import os # Importar el módulo os para la ruta del archivo
+import uvicorn
 
 # Define la ruta al archivo JSON que contendrá los nombres permitidos
 # Se asume que el archivo 'nombres_permitidos.json' está en el mismo directorio que el script.
@@ -108,5 +109,7 @@ def main():
 # Este es el punto de entrada estándar de Python.
 # Asegura que main() se llame solo cuando el script se ejecuta directamente.
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
     # Llama a la función principal para iniciar el bot
     main()
