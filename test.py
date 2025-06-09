@@ -66,7 +66,7 @@ async def verificar_nombre(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
             if sugerencias:
                 # Si se encuentran sugerencias, listarlas con un salto de línea adicional antes
-                respuesta = "NO SE ENCUENTRA EN LA LISTA.\n\nQuizás quisiste decir:\n" + "\n".join(sugerencias)
+                respuesta = "NO SE ENCUENTRA EN LA LISTA.\n\nEncontré estos resultados similares:\n" + "\n".join(sugerencias)
             else:
                 # Si no hay sugerencias, mantener el mensaje original
                 respuesta = "NO SE ENCUENTRA EN LA LISTA"
